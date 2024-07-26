@@ -1,18 +1,17 @@
 "use client";
 
+import Actions from "@/components/Actions";
+import { Skeleton } from "@/components/ui/skeleton";
+import { api } from "@/convex/_generated/api";
+import { useApiMutation } from "@/hooks/useApiMutation";
+import { useAuth } from "@clerk/nextjs";
 import { formatDistanceToNow } from "date-fns";
+import { MoreHorizontal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Overlay from "./Overlay";
-import { useAuth } from "@clerk/nextjs";
-import Footer from "./Footer";
-import { Skeleton } from "@/components/ui/skeleton";
-import { MoreHorizontal } from "lucide-react";
-import Actions from "@/components/Actions";
-import { useApiMutation } from "@/hooks/useApiMutation";
-import { api } from "@/convex/_generated/api";
-import { unFavorite } from "@/convex/board";
 import { toast } from "sonner";
+import Footer from "./Footer";
+import Overlay from "./Overlay";
 interface BoardCardProps {
   id: string;
   title: string;
