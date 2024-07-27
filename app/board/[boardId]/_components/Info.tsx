@@ -11,8 +11,8 @@ import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRenameModal } from "@/store/useRenameModal";
-import { Actions } from "@/components/Actions";
 import { Menu } from "lucide-react";
+import { ActionForBoard } from "@/components/ActionForBoard";
 
 interface infoProps {
   boardId: string;
@@ -63,7 +63,12 @@ const Info = ({ boardId }: infoProps) => {
         </Button>
       </Hint>
       <TabSaperator />
-      <Actions id={data._id} title={data.title} side="bottom" sideOffset={10}>
+      <ActionForBoard
+        id={data._id}
+        title={data.title}
+        side="bottom"
+        sideOffset={10}
+      >
         <div>
           <Hint label="Main Menu" side="bottom" sideOffset={10}>
             <Button size="icon" variant="board">
@@ -71,7 +76,7 @@ const Info = ({ boardId }: infoProps) => {
             </Button>
           </Hint>
         </div>
-      </Actions>
+      </ActionForBoard>
     </div>
   );
 };

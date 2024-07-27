@@ -24,7 +24,13 @@ interface actionsProps {
   title: string;
 }
 
-export const Actions = ({ children, side, sideOffset, id, title }: actionsProps) => {
+export const ActionForBoard = ({
+  children,
+  side,
+  sideOffset,
+  id,
+  title,
+}: actionsProps) => {
   const { onOpen } = useRenameModal();
   const { mutate, pending } = useApiMutation(api.board.remove);
 
@@ -79,4 +85,3 @@ export const Actions = ({ children, side, sideOffset, id, title }: actionsProps)
     </DropdownMenu>
   );
 };
-
