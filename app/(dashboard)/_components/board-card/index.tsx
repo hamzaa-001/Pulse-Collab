@@ -1,6 +1,6 @@
 "use client";
 
-import Actions from "@/components/Actions";
+import { Actions } from "@/components/Actions";
 import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
 import { useApiMutation } from "@/hooks/useApiMutation";

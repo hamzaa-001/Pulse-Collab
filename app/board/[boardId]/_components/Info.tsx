@@ -11,7 +11,7 @@ import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRenameModal } from "@/store/useRenameModal";
-import Actions from "@/components/Actions";
+import { Actions } from "@/components/Actions";
 import { Menu } from "lucide-react";
 
 interface infoProps {
