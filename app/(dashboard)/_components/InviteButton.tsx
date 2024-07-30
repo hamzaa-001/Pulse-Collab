@@ -13,7 +13,7 @@ const InviteButton = () => {
         </Button>
       </DialogTrigger>
       <DialogContent className="p-0 bg-transparent border-none max-w-[880px] max-h-[500px] overflow-y-auto overflow-x-hidden no-scrollbar">
-        <OrganizationProfile />
+        <OrganizationProfile routing="hash" />
       </DialogContent>
     </Dialog>
   );
