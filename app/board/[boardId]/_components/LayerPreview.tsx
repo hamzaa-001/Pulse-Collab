@@ -17,13 +17,6 @@ const LayerPreview = memo(
   ({ id, onLayerPointerDown, selectionColor }: LayerPreviewProps) => {
     const layer = useStorage((root) => root.layers.get(id));
 
-    console.log(
-      {
-        layer,
-      },
-      "Layer-Preview"
-    );
-
     if (!layer) {
       return;
     }
